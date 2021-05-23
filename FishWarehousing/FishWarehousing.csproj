@@ -34,12 +34,12 @@
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="HarmonyPatches\WarehouseAIPatches\StartTransferPatch.cs" />
+    <Compile Include="HarmonyPatches\WarehouseWorldInfoPanelPatches\RefreshDropdownListsPatch.cs" />
     <Compile Include="LoadingExtension.cs" />
     <Compile Include="Mod.cs" />
-    <Compile Include="RefreshDropdownListsPatch.cs" />
     <Compile Include="PatchUtil.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="StartTransferPatch.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="CitiesHarmony.API">

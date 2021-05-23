@@ -1,6 +1,6 @@
 using HarmonyLib;
 
-namespace FishWarehousing
+namespace FishWarehousing.HarmonyPatches.WarehouseWorldInfoPanelPatches
 {
     internal class RefreshDropdownListsPatch
     {

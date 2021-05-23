@@ -1,6 +1,6 @@
 using ColossalFramework;
 
-namespace FishWarehousing
+namespace FishWarehousing.HarmonyPatches.WarehouseAIPatches
 {
     internal static class StartTransferPatch
     {

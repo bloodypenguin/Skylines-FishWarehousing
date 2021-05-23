@@ -12,8 +12,8 @@ namespace FishWarehousing
             {
                 return;
             }
-            StartTransferPatch.Apply();
-            RefreshDropdownListsPatch.Apply();
+            HarmonyPatches.WarehouseAIPatches.StartTransferPatch.Apply();
+            HarmonyPatches.WarehouseWorldInfoPanelPatches.RefreshDropdownListsPatch.Apply();
         }
 
         public override void OnReleased()
@@ -23,8 +23,8 @@ namespace FishWarehousing
             {
                 return;
             }
-            StartTransferPatch.Undo();
-            RefreshDropdownListsPatch.Undo();
+            HarmonyPatches.WarehouseAIPatches.StartTransferPatch.Undo();
+            HarmonyPatches.WarehouseWorldInfoPanelPatches.RefreshDropdownListsPatch.Undo();
         }
     }
 }
