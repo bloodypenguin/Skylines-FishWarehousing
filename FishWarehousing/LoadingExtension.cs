@@ -12,7 +12,7 @@ namespace FishWarehousing
             {
                 return;
             }
-            HarmonyPatches.WarehouseAIPatches.StartTransferPatch.Apply();
+            HarmonyPatches.WarehouseAIPatches.GetTransferVehicleServicePatch.Apply();
             HarmonyPatches.WarehouseWorldInfoPanelPatches.RefreshDropdownListsPatch.Apply();
         }
 
@@ -23,7 +23,7 @@ namespace FishWarehousing
             {
                 return;
             }
-            HarmonyPatches.WarehouseAIPatches.StartTransferPatch.Undo();
+            HarmonyPatches.WarehouseAIPatches.GetTransferVehicleServicePatch.Undo();
             HarmonyPatches.WarehouseWorldInfoPanelPatches.RefreshDropdownListsPatch.Undo();
         }
     }

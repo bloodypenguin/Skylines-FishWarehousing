@@ -34,7 +34,7 @@
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="HarmonyPatches\WarehouseAIPatches\StartTransferPatch.cs" />
+    <Compile Include="HarmonyPatches\WarehouseAIPatches\GetTransferVehicleServicePatch.cs" />
     <Compile Include="HarmonyPatches\WarehouseWorldInfoPanelPatches\RefreshDropdownListsPatch.cs" />
     <Compile Include="LoadingExtension.cs" />
     <Compile Include="Mod.cs" />
