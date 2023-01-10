@@ -4,7 +4,7 @@ using HarmonyLib;
 
 namespace FishWarehousing.HarmonyPatches
 {
-    internal static class GetTransferVehicleServicePatch
+    public static class GetTransferVehicleServicePatch
     {
         [HarmonyPatch(typeof(WarehouseAI), "GetTransferVehicleService")]
         [HarmonyPrefix]

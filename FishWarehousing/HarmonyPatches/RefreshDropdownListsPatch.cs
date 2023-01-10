@@ -2,7 +2,7 @@ using HarmonyLib;
 
 namespace FishWarehousing.HarmonyPatches
 {
-    internal class RefreshDropdownListsPatch
+    public static class RefreshDropdownListsPatch
     {
         private static TransferManager.TransferReason[] m_transferReasons = new TransferManager.TransferReason[16]
         {
