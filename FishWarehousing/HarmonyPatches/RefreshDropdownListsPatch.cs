@@ -1,6 +1,6 @@
 using HarmonyLib;
 
-namespace FishWarehousing.HarmonyPatches.WarehouseWorldInfoPanelPatches
+namespace FishWarehousing.HarmonyPatches
 {
     internal class RefreshDropdownListsPatch
     {
@@ -25,20 +25,9 @@ namespace FishWarehousing.HarmonyPatches.WarehouseWorldInfoPanelPatches
         };
         
         
-        internal static void Apply()
-        {
-            PatchUtil.Patch(
-                new PatchUtil.MethodDefinition(typeof(WarehouseWorldInfoPanel), "RefreshDropdownLists"),
-                new PatchUtil.MethodDefinition(typeof(RefreshDropdownListsPatch), (nameof(Prefix))));
-        }
-
-        internal static void Undo()
-        {
-            PatchUtil.Unpatch(new PatchUtil.MethodDefinition(typeof(WarehouseWorldInfoPanel), "RefreshDropdownLists"));
-        }
-
-        private static bool Prefix(
-            WarehouseWorldInfoPanel __instance)
+        [HarmonyPatch(typeof(WarehouseWorldInfoPanel), "RefreshDropdownLists")]
+        [HarmonyPrefix]
+        public static bool Prefix(WarehouseWorldInfoPanel __instance)
         {
             var fieldInfo = AccessTools.Field(__instance.GetType(), "m_transferReasons");
             var reasons = (TransferManager.TransferReason[])fieldInfo.GetValue(__instance);
