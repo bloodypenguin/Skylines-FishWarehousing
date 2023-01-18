@@ -5,7 +5,8 @@ using UnityEngine;
 
 namespace FishWarehousing.HarmonyPatches
 {
-	public static class CalculateOwnVehiclesPatch
+	[HarmonyPatch(typeof(CommonBuildingAI))]
+	public static class CommonBuildingAIPatch
 	{
 		[HarmonyPatch(typeof(CommonBuildingAI), "CalculateOwnVehicles")]
         [HarmonyPrefix]
