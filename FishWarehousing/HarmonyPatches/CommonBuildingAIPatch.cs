@@ -36,7 +36,7 @@ namespace FishWarehousing.HarmonyPatches
 						
 					}
 					num = instance.m_vehicles.m_buffer[num].m_nextOwnVehicle;
-					if (++num2 > 16384)
+					if (++num2 > LoadingExtension.MaxVehicleCount)
 					{
 						CODebugBase<LogChannel>.Error(LogChannel.Core, "Invalid list detected!\n" + Environment.StackTrace);
 						break;
